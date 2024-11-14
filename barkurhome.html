@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Barkur</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Styles */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        header {
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.755);
+        }
+
+        nav h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #faa307;
+        }
+
+        /* Video Background */
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3); /* Dark overlay for text contrast */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .video-overlay h2 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .video-overlay p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #faa307;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        /* Audio Button Styling */
+        .audio-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            font-size: 24px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .audio-button:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Background Video -->
+    <header>
+        <nav>
+            <h1>Explore Barkur</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="barkurhistory.html">History</a></li>
+                <li><a href="barkurtemples.html">Temples</a></li>
+                <li><a href="barkurgallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Video Background Section with Audio Control -->
+        <div class="video-container">
+            <video id="background-video" autoplay muted loop playsinline>
+                <source src="Video-464.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay">
+                <h2>Welcome to Barkur</h2>
+                <p>Discover the rich history, heritage, and beauty of this ancient town.</p>
+                <a href="https://www.trayaan.com/2013/01/ruins-of-barkur.html" class="cta-button">Explore History</a>
+            </div>
+
+            <!-- Audio Play Button -->
+            <button id="audio-control" class="audio-button">🔊</button>
+            <audio id="background-audio" loop>
+                <source src="audio.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </header>
+
+    <!-- Other Sections -->
+    <section class="history" id="history">
+        <h2>History of Barkur</h2>
+        <p>Barkur, once the capital of Tulu Nadu, is rich in ancient temples and historical landmarks. Explore the traces of the Chola dynasty and the beautiful ruins that tell the story of its glorious past.</p>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const audioControl = document.getElementById("audio-control");
+            const backgroundAudio = document.getElementById("background-audio");
+            const backgroundVideo = document.getElementById("background-video");
+
+            let isPlaying = false;
+
+            // Audio control event listener
+            audioControl.addEventListener("click", () => {
+                if (isPlaying) {
+                    backgroundAudio.pause();
+                    audioControl.textContent = "🔊"; // Icon for sound on
+                } else {
+                    backgroundAudio.play();
+                    audioControl.textContent = "🔇"; // Icon for sound off
+                }
+                isPlaying = !isPlaying;
+            });
+
+            // Start audio on first click to avoid autoplay restrictions
+            audioControl.addEventListener("click", () => {
+                backgroundAudio.play();
+            });
+        });
+
+    </script>
+</body>
+<footer>
+    <p>&copy; 2024 Barkur Tourism. All rights reserved.-Anmol S Poojary</p>
+</footer>
+</html>
+

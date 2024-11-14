@@ -1,0 +1,94 @@
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+header h1 {
+    display: inline;
+}
+
+nav ul {
+    list-style: none;
+    display: inline;
+    float: right;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+}
+
+/* Tourism, News, and Gallery sections */
+.tourism, .news, .gallery {
+    padding: 40px 20px;
+}
+
+/* Explore Barkur Section */
+.explore-barkur {
+    background-color: #f4f4f4; /* Light grey background */
+    padding: 40px 20px;        /* Padding for spacing */
+    text-align: center;        /* Center the text */
+    margin-top: 40px;          /* Space above the section */
+    border-radius: 8px;        /* Rounded corners */
+}
+
+.explore-barkur h2 {
+    font-size: 2rem;           /* Larger font size for heading */
+    color: #2c3e50;            /* Dark color for the text */
+    margin-bottom: 20px;       /* Space below the heading */
+}
+
+.explore-barkur p {
+    font-size: 1.1rem;         /* Slightly larger font for description */
+    color: #555;               /* Dark grey color for text */
+    line-height: 1.6;          /* Improve readability with line height */
+    margin-bottom: 20px;       /* Space below the text */
+    max-width: 700px;          /* Limit the width of the paragraph */
+    margin-left: auto;
+    margin-right: auto;        /* Center the text */
+}
+
+.explore-barkur .cta-button {
+    background-color: #3498db; /* Blue button */
+    color: #fff;               /* White text */
+    padding: 10px 20px;        /* Padding inside button */
+    text-decoration: none;     /* Remove underline */
+    font-size: 1rem;           /* Font size for the button */
+    border-radius: 5px;        /* Rounded corners for button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.explore-barkur .cta-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Attraction, News, and Gallery item styles */
+.attraction, .news-item, .gallery-item {
+    margin-bottom: 20px;
+}

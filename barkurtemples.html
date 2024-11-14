@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temples in Barkur</title>
+    <style>
+        /* Resetting basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header / Navbar Styling */
+        header {
+            background: linear-gradient(135deg, #023e8a, #0096c7);
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-family: 'Merriweather', serif;
+            color: #fff;
+            letter-spacing: 2px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        header nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+        }
+
+        header ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header ul li a:hover {
+            color: #ffba08;
+        }
+
+        /* Animating Header */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Temples Section Styling */
+        .temples {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+
+        .temples h2 {
+            font-size: 2.5rem;
+            color: #023e8a;
+            margin-bottom: 20px;
+            font-family: 'Merriweather', serif;
+            line-height: 1.2;
+            animation: slideInFromLeft 1s ease-out;
+        }
+
+        @keyframes slideInFromLeft {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+
+        .temples p {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            animation: fadeInText 2s ease-out;
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Temple Images Styling */
+        .temple-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeInImages 2s ease-out forwards;
+        }
+
+        @keyframes fadeInImages {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .temple-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .temple-images img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button {
+            background-color: #0096c7;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #023e8a;
+            transform: translateY(-2px);
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #023e8a;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header nav {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .temples h2 {
+                font-size: 2rem;
+            }
+
+            .temples p {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header>
+        <nav>
+            <h1>Explore Barkur</h1>
+            <ul>
+                <li><a href="barkurhome.html">Home</a></li>
+                <li><a href="barkurhistory.html">History</a></li>
+                <li><a href="barkurtemples.html">Temples</a></li>
+                <li><a href="barkurgallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Temples Section -->
+    <section class="temples" id="temples">
+        <h2>Temples in Barkur</h2>
+        <p>Barkur is home to several important temples that reflect its religious heritage. The town is known for the <strong>Sri Bairagi Ganapathi Temple</strong>, an ancient and revered temple that attracts pilgrims from all over. The temple is famous for its unique architecture, with beautiful stone carvings and sculptures that date back to the Chola period.</p>
+        
+        <!-- Temple Images -->
+        <div class="temple-images">
+            <img src="https://www.trawell.in/admin/images/upload/932329670Barkur_Main.jpg" alt="Sri Bairagi Ganapathi Temple">
+            <img src="https://collectingmoments.in/wp-content/uploads/2023/01/Batte-Vinayaka-Temple-Barkur2.jpeg">
+            <img src="https://collectingmoments.in/wp-content/uploads/2023/01/Kattale-Basadi-Barkur14-1.jpeg" alt="Sri Durga Parameshwari Temple">
+            <img src="https://collectingmoments.in/wp-content/uploads/2023/01/Panchlingeshvara-Temple-Barkur23-1.jpeg" alt="Sri Durga Parameshwari Temple">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIs1r4Rjw_PgJ65MsOfMEfp_Xrhgm9Z5tNA&s" alt="Sri Durga Parameshwari Temple">
+            <img src="https://collectingmoments.in/wp-content/uploads/2023/01/Somnatheswar-Temple-Barkur5-1.jpeg">
+        </div>
+
+        <p>Other notable temples in Barkur include the <strong>Sri Vishnu Temple</strong> and the <strong>Sri Durga Parameshwari Temple</strong>, which are significant sites of worship and have historical significance within the local community.</p>
+        
+        <a href="tourism.html" class="cta-button">Learn More About Temples</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Barkur Tourism. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Animations Trigger -->
+    <script>
+        // Intersection Observer for triggering animation when images come into the viewport
+        const images = document.querySelectorAll('.temple-images img');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fadeInImages'); // Trigger fade-in animation
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        images.forEach(image => {
+            imageObserver.observe(image);
+        });
+    </script>
+</body>
+</html>
